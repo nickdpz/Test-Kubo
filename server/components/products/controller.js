@@ -12,6 +12,18 @@ const getProduct = (id) => {
     })
 }
 
+const getProducts = () => {
+    return new Promise(async (resolve, reject) => {
+        storeProduct.getProducts()
+            .then((messages) => {
+                resolve(messages)
+            })
+            .catch(e => {
+                reject(e)
+            })
+    })
+}
+
 const addProduct = (cover, name, shortDescription, price) => {
     return new Promise(async (resolve, reject) => {
         storeProduct.addProduct({ cover, name, shortDescription, price })
@@ -26,4 +38,4 @@ const addProduct = (cover, name, shortDescription, price) => {
 
 
 
-module.exports = { getProduct, addProduct }
+module.exports = { getProducts , getProduct, addProduct }

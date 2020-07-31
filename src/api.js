@@ -1,3 +1,5 @@
+import { phone } from "faker";
+
 const BASE_URL = '';
 
 async function callApi(endpoint, options = {}) {
@@ -13,8 +15,23 @@ async function callApi(endpoint, options = {}) {
 }
 
 const api = {
+  getProducts() {
+    return callApi(`/product/`);
+  },
   getProduct(id) {
     return callApi(`/product/${id}`);
+  },
+  postBuy(name,phone,email,product,count) {
+    return callApi('/buy/', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        email:email,
+        product:product,
+        productCount:count
+      })
+    })
   }
 };
 
