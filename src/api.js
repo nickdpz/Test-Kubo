@@ -1,6 +1,6 @@
 import { phone } from "faker";
 
-const BASE_URL = '';
+const BASE_URL = 'http://localhost:8000';
 
 async function callApi(endpoint, options = {}) {
   options.headers = {

@@ -45,6 +45,9 @@ function SalesList(props) {
           );
         })}
       </ul>
+      <h3>
+        Total: {props.total}
+      </h3>
     </div>
   );
 }

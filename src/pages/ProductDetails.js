@@ -16,7 +16,7 @@ class ProductDetails extends Component {
     fetchData = async () => {
         this.setState({ loading: true, error: null });
         try {
-            const data = await api.data.getProduct(this.props.match.params.productId);
+            const data = await api.getProduct(this.props.match.params.productId);
             if (data.length !== 0) {
                 this.setState({ loading: false });
             } else {

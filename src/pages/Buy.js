@@ -5,13 +5,15 @@ import Header from '../components/Header';
 import SalesList from '../components/SalesList'
 import FormBuy from '../components/FormBuy'
 import Footer from '../components/Filter'
+import { clearProductCar } from '../actions';
 
-const Buy = ({ productsCar }) => {
+
+const Buy = ({ productsCar, total }) => {
     return (
         <div className="container">
             <Header />
-            <SalesList sales={productsCar} />
-            <FormBuy productsCar={productsCar}/>
+            <SalesList sales={productsCar} total={total} />
+            <FormBuy productsCar={productsCar} />
             <Footer />
         </div>
     );
@@ -20,6 +22,10 @@ const Buy = ({ productsCar }) => {
 const mapStateToProps = (state) => {
     return {
         productsCar: state.productsCar,
+        total: state.total,
     };
 };
-export default connect(mapStateToProps, null)(Buy);
+const mapDispatchToProps = {
+    clearProductCar,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Buy);

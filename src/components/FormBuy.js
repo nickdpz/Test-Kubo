@@ -38,7 +38,7 @@ class FormBuy extends React.Component {
       icon: 'success'
     }).then((result) => {
       if (result.value || !result.value) {
-        this.props.history.push('/badges');
+        this.props.history.push('/');
       }
     });
   }

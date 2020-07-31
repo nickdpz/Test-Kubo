@@ -7,3 +7,8 @@ export const removeProductCar = (payload) => ({
 	type: 'REMOVE_PRODUCT',
 	payload,
 });
+
+export const clearProductCar = (payload) => ({
+	type: 'CLEAR_PRODUCT',
+	payload,
+});
