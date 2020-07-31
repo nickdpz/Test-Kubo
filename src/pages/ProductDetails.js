@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './styles/Product.css';
 import { addProductCar, removeProductCar } from '../actions';
@@ -50,7 +51,7 @@ class ProductDetails extends Component {
             <div className="container" >
                 <div className="row">
                     <div className="col-8 p-2">
-                        <img src={cover} alt={id} width="500"/>
+                        <img src={cover} alt={id} width="500" />
                     </div>
                     <div className="col-4 align-content-center">
                         <h1>{name}</h1>
@@ -61,6 +62,12 @@ class ProductDetails extends Component {
                         <button onClick={this.handleAdd} className="btn btn-primary">+</button>
                         <p>{this.state.count}</p>
                         <button onClick={this.handleRemove} className="btn btn-primary">-</button>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <Link to={'/buy'} className="btn btn-primary">
+                            <p className=''>Pagar</p>
+                        </Link>
                     </div>
                 </div>
             </div>

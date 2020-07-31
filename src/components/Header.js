@@ -6,6 +6,9 @@ const Header = (props) => {
   const { product } = props;
   return (
     <header className="">
+    <Link to={'/buy'} className="btn">
+      <p className=''>carro</p>
+    </Link>
     </header>
   );
 };
