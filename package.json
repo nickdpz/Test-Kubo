@@ -16,7 +16,7 @@
     "create-react-app": "^3.4.1",
     "express-session": "^1.17.1",
     "md5": "^2.2.1",
-    "mongoose": "^5.9.26",
+    "mongoose": "^8.8.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
